@@ -44,7 +44,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'simplecov', require: false
 end
 
 group :development do
@@ -59,7 +58,9 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'simplecov', require: false
   gem 'selenium-webdriver'
+  gem 'factory_bot_rails'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
@@ -76,6 +77,9 @@ end
 
 #adding the gem "devise"
 gem 'devise'
+
+
+
 
 #adding capybara
 #group :development, :test do
