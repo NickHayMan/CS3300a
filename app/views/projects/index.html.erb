@@ -1,32 +1,45 @@
 <p id="notice"><%= notice %></p>
+<html>
+<body>
 
-<h1>Projects</h1>
+<div class="jumbotron">
+	<div class="container">
+		<h1 style="text-align:center;">Welcome to my website!</h1>
+		<p style="text-align:center;">This is my CS3300 portfolio project using Ruby on Rails</p>
+	</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+</body>
+</html>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="container">
+<h1 style="text-align:center;">Projects</h1>
+<hr>
+<br>
+ <div class="row">
+  <% @projects.each do |project| %>
+    
+    <div class="col-md-4">
+      <center>
+        <h2 style="text-align:center;"><%= project.title %></h2>
+        <p style="text-align:center;"><%= project.description %></p>
+        <a class="btn btn-secondary"  <%= link_to 'Show', project %></a>
+        <a class="btn btn-secondary" <%= link_to 'Edit', edit_project_path(project) %></a>
+        <a class="btn btn-secondary" <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %> </a> 
+        </center>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  <div>
+  
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+
+<hr>
+<p>Nicholas Hay | (719)325-6812 |  nlhay73.nh@outlook.com</p>
 
 
-<%= button_to "logout", destroy_user_session_path, method: :delete  %>
+
+
+
+

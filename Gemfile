@@ -78,8 +78,11 @@ end
 #adding the gem "devise"
 gem 'devise'
 
+#add gem bootstrap
+gem 'bootstrap', '~> 4.6.1'
 
-
+#adding jquery
+gem 'jquery-rails'
 
 #adding capybara
 #group :development, :test do
